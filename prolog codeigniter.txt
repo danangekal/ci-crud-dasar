@@ -1,0 +1,91 @@
+Codeigniter adalah opensource web framework untuk membangun website dinamis dengan menggunakan PHP. CI disusun dengan menganut konsep MVC (Model, View, Controller), suatu konsep yang cukup populer dalam pembangunan aplikasi web.
+CI pertama kalai dirilis oleh ellislab.com pada  28 Februari 2006, dan kini di maintaince oleh  British Columbia Institute of Technology .
+FRAMEWORK
+Framework secara sederhana dapat diartikan kumpulan dari fungsi-fungsi/prosedur-prosedur dan class-class untuk tujuan tertentu yang sudah siap digunakan sehingga bisa lebih mempermudah dan mempercepat pekerjaan seorang programer, tanpa harus membuat fungsi atau class dari awal.
+Ada beberapa alasan mengapa menggunakan Framework:
+Mempercepat dan mempermudah pembangunan sebuah aplikasi web.
+Relatif memudahkan dalam proses maintenance karena sudah ada pola tertentu dalam sebuah framework (dengan syarat programmer mengikuti pola standar yang ada)
+Umumnya framework menyediakan fasilitas-fasilitas yang umum dipakai sehingga kita tidak perlu membangun dari awal (misalnya validasi, ORM, pagination, multiple database, scaffolding, pengaturan session, error handling, dll
+
+
+Model View Controller Concept
+MODEL VIEW CONTROLLER
+Model View Controller merupakan suatu konsep yang cukup populer dalam pembangunan aplikasi web, berawal pada bahasa pemrograman Small Talk, MVC memisahkan pengembangan aplikasi berdasarkan komponen utama yang membangun sebuah aplikasi seperti manipulasi data, user interface, dan bagian yang menjadi kontrol aplikasi. Terdapat 3 jenis komponen yang membangun suatu MVC pattern dalam suatu aplikasi yaitu :
+View
+Merupakan bagian yang menangani presentation logic. Pada suatu aplikasi web bagian ini biasanya berupa file template HTML, yang diatur oleh controller. View berfungsi untuk menerima dan merepresentasikan data kepada user. Bagian ini sebaiknya tidak memiliki akses langsung terhadap bagian model.
+Model 
+Biasanya berhubungan langsung dengan database untuk memanipulasi data (insert, update, delete, search), menangani validasi dari bagian controller, namun sebaiknya tidak berhubungan langsung dengan bagian view.
+Controller
+Merupakan bagian yang mengatur hubungan antara bagian model dan bagian view, controller berfungsi untuk menerima request dan data dari user kemudian menentukan apa yang akan diproses oleh aplikasi.
+FITUR FITUR PADA CODEIGNITER
+Codeigniter Framework memberikan banyak pilihan modul siap pakai yang bisa dimodifikasi dan di ekstend. Beberapa fitur utama Codeigniter antara lain:
+Model-View-Controller Based System , Support multi database platform, Database query builder, Form data validaiton,  Email Sending Class,  Image Manipulation,  File Uploading,  FTP Module,  Localization,  Pagination, Data Encryption,  Benchmarking ,  Full Page Caching , Error Logging, Application Profiling, Calendaring, User Agent Class, Zip Encoding Class, Template Engine Class,  Trackback Class, XML-RPC Library, Unit Testing Class, Flexible URI Routing dan sekumpulan helpers lainya.
+
+
+Codeigniter Application Flow
+Cara kerja Codeigniter
+ 1.  Frontend index.php
+Seperti yang ditunjukkan pada gambar, setiap kali tejadi request ke aplikasi CodeIgniter, maka untuk pertama kali akan diarahkan ke file index.php.
+2. Routing
+Proses berikutnya, Routing akan memutuskan apakah akan meneruskan permintaan ini ke langkah-3 untuk caching atau melewati permintaan ini ke langkah-4 untuk pemeriksaan keamanan.
+
+3. Caching
+Jika halaman yang diminta sudah dalam Caching, maka Routing akan melanjutkan ke proses berikutnya.
+
+4. Security
+Sebelum request di terukan ke bagian controller, fungsi keamanan bekerja, mulai dari validasi input dari user hingga deteksi sql injection.
+
+5. Application Controller
+Setelah dipastikan lolos dari tahap security checker, request akan diteruskan ke bagian controller. Di dalam controller, akan diload beberapa komponen framework seperti model, librariy, helper, plugin dan file configurasi yang diperlukan
+
+6. Application Views
+Dari controller, akan dilemparkan ke view. View inilah yang akan menampilkan data ke user melalui komponen html, css dan javascript.
+ Struktur Aplikasi 
+ 
+
+
+
+Ada 3 folder utama ketika anda pertama kali mendownload framework codeigniter. 
+1. Application
+Folder ini adalah folder tempat anda bekerja, semua proses produksi aplikasi di letakan di folder ini.
+
+2. System
+System adalah folder core sistem pada codeigniter. Sebaiknya tidak melakukan perubahan sama sekali pada bagian ini.
+
+3. user guide
+Berisi manual guide penggunaan framework codeigniter
+
+ Application
+- Cache :  berisi semua halaman cache dari aplikasi. Cache akan meningkatkan kecepatan loading halaman aplikasi.
+
+- Config
+Folder ini berisi berbagai file untuk mengkonfigurasi aplikasi. Beberapa file configurasi yang paling sering digunakan adalah config.php, database.php, routes.php dan autoad.php
+
+- Controllers 
+Folder ini berisi file controller yang memegang pengendali dari aplikasi Anda. Controller adalah bagian utama dari aplikasi codeigniter.
+
+-  Core  
+Folder ini akan berisi kelas dasar dari aplikasi codeigniter.
+
+- Helpers 
+Dalam folder ini, Anda dapat menempatkan alat bantu dan fungsi tambahan sederhana. 
+
+-  Hooks  
+File dalam folder ini menyediakan sarana untuk mengektensi dan mengubah cara kerja core aplikasi dengan tanpa menyentuh file aplikasi inti pada folder ‘system’.
+
+-  Language  
+Folder ini berisi file terkait lokalisasi bahasa dan untuk fitur transalator multi language.
+-  Libraries 
+Folder ini berisi file-file library yang dikembangkan untuk aplikasi Anda. Konsepnya sama seperti helper namun akan menghandle fungsi fungsi yang sifatnya lebih kompleks.
+
+-  Logs  
+Folder ini berisi file yang terkait dengan log dari aplikasi. 
+
+-  Models  
+File file model yang bertugas untuk berkomunikasi dengan database akan ditempatkan di folder ini.
+
+ - Third_party  
+Folder ini untuk menempatkan plugin dari pihak ketiga yang akan digunakan untuk aplikasi codeigniter.
+
+-  Views  
+FIle aplikasi HTML akan ditempatkan di folder ini.
